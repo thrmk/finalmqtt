@@ -302,4 +302,4 @@ def update_output(valueDEV,valueOP,value2,x):
         
 if __name__=="__main__":
 #    print("main starts")
-    app.run_server(debug=False)
+    app.run_server(debug=True)
