@@ -1,1 +1,1 @@
-web: gunicorn man:server
+web: gunicorn last:server
