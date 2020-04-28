@@ -372,8 +372,8 @@ def update_download_link(input_value):
     return [html.Table(table(filtered_df)
         )]
 
-@app.callback(Output("download-link", "data"),
-              [Input("downoad-link", "n_clicks"),Input('my-date-picker-range2', 'start_date'),Input('my-date-picker-range2', 'end_date')])
+#@app.callback(Output("download-link", "data"),
+#              [Input("downoad-link", "n_clicks"),Input('my-date-picker-range2', 'start_date'),Input('my-date-picker-range2', 'end_date')])
 def update_download_link(input_value,start,end):
   if n_clicks:  
     connection1 = engine
