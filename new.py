@@ -136,7 +136,7 @@ app.layout = html.Div([navbar,content,
            dcc.Tabs(id="tabs", children=[
                 dcc.Tab(label='Graph', value='/page-1',style={'backgroundColor':'purple'}),
                 #dcc.Tab(label='Graph', value='/page-1',style={'backgroundColor':'#B2A29E'}),
-                dcc.Tab(label='Table',  value='/page-2',style={'backgroundColor':'green', 'font-weight': 'bold'}),
+                dcc.Tab(label='Table',  value='/page-2',style={'backgroundColor':'green'}),# 'font-weight': 'bold'}),
                 dcc.Tab(label='Read',  value='/page-3',style={'backgroundColor':'brown'}),
                 dcc.Tab(label='Write', value='/page-4',style={'backgroundColor':'blue'}),
 ],value='/page-1')]),
@@ -172,8 +172,9 @@ page_2_graph = dbc.Jumbotron([
   ], style={"border":"2px black solid"}),
   ])
 
-page_1_table = dbc.Jumbotron([
-    dbc.Container(html.Div([html.H3('Table Data'),
+#page_1_table = dbc.Jumbotron([
+#    dbc.Container(
+page_1_table = html.Div([html.H3('Table Data'),
         dcc.DatePickerRange(
             id='my-date-picker-range2',
             min_date_allowed=datetime(1995, 8, 5,1,1,1,1),
@@ -189,7 +190,7 @@ page_1_table = dbc.Jumbotron([
             href="",target="_blank"),
             dcc.Link(href='/page-2'),
             html.Div([html.Table(id="live-update-text")],style={'maxHeight':"500px","overflowY":"scroll"}),
-]),style={"border":"2px black solid","padding":"0 rem"}),])
+])#,style={"border":"2px black solid","padding":"0 rem"}),])
 
 
          
