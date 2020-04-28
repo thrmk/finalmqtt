@@ -187,7 +187,7 @@ html.Div(id='dd-output-container'),
             n_intervals=0
         ),
     dcc.Link(href='/page-1'),
-],style={'maxHeight':"430px","overflowY":"scroll"})
+],style={'maxHeight':"500px","overflowY":"scroll"})
 
 page_1_table = html.Div([
                 html.H3('Table Data'),
@@ -217,7 +217,7 @@ page_1_table = html.Div([
  
             dcc.Link(href='/page-2'),
             html.Div([
-            html.Table(id="live-update-text")],style={'maxHeight':"420px","overflowY":"scroll"})
+            html.Table(id="live-update-text")],style={'maxHeight':"450px","overflowY":"scroll"})
 
 ])
 
