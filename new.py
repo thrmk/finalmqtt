@@ -425,4 +425,4 @@ def tab_updates_url(value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True,threaded=False)#, use_reloader=True)
+    app.run_server(debug=True,threaded=True)#, use_reloader=True)
