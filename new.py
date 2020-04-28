@@ -141,7 +141,7 @@ app.layout = html.Div([navbar,content,
                 dcc.Tab(label='Write', value='/page-4',style={'backgroundColor':'blue'}),
 ],value='/page-1')]),
         ],style={'backgroundColor':'#00C0C0'})    
-
+"""
 page_2_graph = dbc.Jumbotron([
     dbc.Container([
         dbc.Row([
@@ -171,6 +171,44 @@ page_2_graph = dbc.Jumbotron([
   
   ], style={"border":"2px black solid"}),
   ])
+"""
+
+page_2_graph =dbc.Jumbotron([
+            dbc.Row([
+                html.Div([
+    html.H3('Graph'),
+
+    dcc.Dropdown(
+        id='devices',
+        options=[
+            {'label': 'R1', 'value': 'R1 '},
+            {'label': 'G2', 'value': 'G2 '},
+            {'label': 'R2', 'value': 'R2 '}
+        ],
+        value='R1 ', style={"width":"auto"}),
+    dcc.DatePickerRange(
+        id='my-date-picker-range',
+        min_date_allowed=datetime(1995, 8, 5,1,1,1,1),
+        max_date_allowed=datetime.now(),
+        #initial_visible_month=datetime.today(),
+        initial_visible_month=datetime.now(),
+    #    end_date=dt(2017, 8, 25).date()
+    end_date=datetime.now(),
+    start_date=datetime.now()-timedelta(days=1)
+    ),
+    html.Div(id='output-container-date-picker-range'),
+
+
+html.Div(id='dd-output-container'),
+    dcc.Graph(id='graph-with-slider'),
+    dcc.Interval(
+            id='interval-component',
+            interval=1*1000, # in milliseconds
+            n_intervals=0
+        ),
+    dcc.Link(href='/page-1'),
+    ],style={'maxHeight':"400px","overflowX":"scroll","overflowY":"scroll",'width':'600px'}),],style={"border":"2px black solid",'maxHeight':'500px','width':'600px','padding': '0px 20px 20px 20px'}),
+    ])
 
 #page_1_table = dbc.Jumbotron([
 #    dbc.Container(
