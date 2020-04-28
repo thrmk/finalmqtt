@@ -200,7 +200,7 @@ page_2_graph =dbc.Jumbotron([
 
 
 html.Div(id='dd-output-container'),
-    dcc.Graph(id='graph-with-slider'),
+    dcc.Graph(id='graph-with-slider',style={"width":"auto","height":"300px"}),
     dcc.Interval(
             id='interval-component',
             interval=1*1000, # in milliseconds
