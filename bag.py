@@ -444,5 +444,5 @@ def tab_updates_url(value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True,threaded=True)#, **flask_run_options)#False)
+    app.run_server(debug=True,threaded=False, use_reloader=False)#, **flask_run_options)#False)
 
