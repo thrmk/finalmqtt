@@ -136,7 +136,7 @@ app.layout = html.Div([navbar,content,
            dcc.Tabs(id="tabs", children=[
                 dcc.Tab(label='Graph', value='/page-1',style={'backgroundColor':'purple'}),
                 #dcc.Tab(label='Graph', value='/page-1',style={'backgroundColor':'#B2A29E'}),
-                dcc.Tab(label='Table',  value='/page-2',style={'backgroundColor':'green', 'font-weight': 'bold'}),
+                dcc.Tab(label='Table',  value='/page-2',style={'backgroundColor':'green'}) ,# 'font-weight': 'bold'}),
                 dcc.Tab(label='Read',  value='/page-3',style={'backgroundColor':'brown'}),
                 dcc.Tab(label='Write', value='/page-4',style={'backgroundColor':'blue'}),
 ],value='/page-1')]),
