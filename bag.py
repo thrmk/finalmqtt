@@ -217,7 +217,7 @@ page_1_table = html.Div([
  
             dcc.Link(href='/page-2'),
             html.Div([
-            html.Table(id="live-update-text")],style={'maxHeight':"450px","overflowY":"scroll"})
+            html.Table(id="live-update-text")],style={'maxHeight':"420px","overflowY":"scroll"})
 
 ])
 
